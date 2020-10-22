@@ -1,0 +1,11 @@
+{
+  "name": "ts_practice",
+  "version": "1.0.0",
+  "description": "i m creating this package json file using npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Awais Mansha",
+  "license": "ISC"
+}
