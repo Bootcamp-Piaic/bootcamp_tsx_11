@@ -13,7 +13,7 @@ type AnswerObject = {
 function App() {
 
 
-  const [totalQuestions, settotalQuestions] = useState(2)
+  const [totalQuestions, settotalQuestions] = useState(5)
   const [loading, setloading] = useState(false)
   const [questions, setquestions] = useState<QuestionState[]>([])
   const [number, setnumber] = useState(0)

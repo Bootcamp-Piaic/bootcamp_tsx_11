@@ -24,3 +24,4 @@ function check(a:number){
     return a*a;
 }
 check(5);
+let arr:readonly number[]=[1,2,3,4,5,6]
