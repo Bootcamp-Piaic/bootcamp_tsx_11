@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { unescapeLeadingUnderscores } from 'typescript';
 import { Difficulty, fetchQuestions, QuestionState } from './API';
 import { QuestionCard } from './components/QuestionCard';
 import {GlobalStyle,Wrapper} from './App.styles'
@@ -22,6 +21,7 @@ function App() {
   const [gameOver, setgameOver] = useState(true)
 
   const startQuiz = async () => {
+    settotalQuestions(5)
     setloading(true)
     setgameOver(false)
     setquestions(await fetchQuestions(totalQuestions, Difficulty.EASY))
