@@ -4,10 +4,11 @@ export const fetchQuestions = async (totalquestions: number, difficulty: Difficu
 
     const url=`https://opentdb.com/api.php?amount=${totalquestions}&difficulty=${difficulty}&type=multiple`
     const data=await (await fetch(url)).json();
-    console.log(data)
-    return data.results.map((question:Question)=>(
+    console.log("data is =",data)
+    return data.results.map((question:Question)=>( // mapping to all results 
         {
-            ...question,
+            ...question, // dont touch to questions
+            // but adding a NEW object of type 'answers' below with all answers
             answers:shuffleArray([...question.incorrect_answers,question.correct_answer])
         }
         
